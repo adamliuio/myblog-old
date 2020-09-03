@@ -1,0 +1,30 @@
+<div id="topbar" class="is-hidden-print">
+	<div class="wrapper">
+		<header>
+			<div class="is-navbar-container">
+				<nav>
+				<div class="is-brand">
+					<a class="logo" href="/"><i>AL</i></a>
+					<a href="#"
+						 class="is-push-right-mobile is-shown-mobile icon-kube-menu"
+						 data-kube="toggle"
+						 data-target="#navbar-main"></a>
+				</div>
+				</nav>
+				<div id="navbar-main" class="is-navbar is-hidden-mobile is-center-mobile">
+					<nav>
+						<ul>
+							<li><a href="/musings">Musings</a></li>
+						<!--	<li><a href="/projects">Projects</a></li>  -->
+							<li><a href="/vitae">Vitae</a></li>
+							<li><a href="#connect">Connect</a></li>
+						</ul>
+					</nav>
+					<nav class="is-push-right is-left-mobile" class="is-hidden-mobile">
+						{{ partial "searchform.html" . }}
+					</nav>
+				</div>
+			</div>
+		</header>
+	</div>
+</div>

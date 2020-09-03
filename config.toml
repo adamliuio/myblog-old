@@ -1,0 +1,13 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Adam Liu's Blog."
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[author]
+name = "Adam Liu"
+email = "adamhleo@gmail.com"
+
+[params]
+title = "Adam Liu"
+copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+description = "I create software & videos, and I try my best to share positivity through everything I create. config.toml"

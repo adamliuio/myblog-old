@@ -1,0 +1,66 @@
+{{ $asset_base := .Site.BaseURL }}
+{{ if ne (getenv "HUGO_ASSET_BASEURL") "" }}
+	{{ $asset_base = (getenv "HUGO_ASSET_BASEURL") }}
+{{ end }}
+<footer id="footer" class="is-hidden-print">
+	<div class="wrapper">
+		<div class="is-row .is-small is-muted">
+			<div class="is-col is-50">
+				<h3>About</h3>
+				<em>
+					<p>I'm chasing the sailing dream, the ocean dream, the dancing with the star & flowing with the wind dream.</p>
+					<p>Content on this site is provided under a
+						<a href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons (CC-BY) 4.0 license.</a>
+						You may re-use this content as long as you indicate my authorship and provide a link back to the original material.
+						Source code of the site is provided under the <a href="https://opensource.org/licenses/MIT">MIT license</a>
+						and may be reused without restriction.</p>
+					<p>This site is gratefully built using a variety of open-source resources and inspirations.</p>
+				</em>
+			</div>
+			<div class="is-col is-50">
+				<h3 id="connect">Connect</h3>
+				<ul class="fa-ul">
+					<li>
+						<a href="https://www.youtube.com/channel/UCH_HOJeExBZN_9R2LLNUKeA" target="_blank"><i class="fa-li fab fa-youtube fa-fw"></i></a>
+						Check out my videos at <a href="https://www.youtube.com/channel/UCH_HOJeExBZN_9R2LLNUKeA" target="_blank">Adam Liu</a></a>.
+					</li>
+					<li>
+						<a href="https://www.instagram.com/ohadamboy/" target="_blank"><i class="fa-li fab fa-instagram fa-fw"></i></a>
+						And I post photos at <a href="https://www.instagram.com/ohadamboy/" target="_blank">@ohadamboy</a>.
+					</li>
+					<li>
+						<a href="https://twitter.com/adamhleo" target="_blank"><i class="fa-li fab fa-twitter fa-fw"></i></a>
+						Follow me on twitter at <a href="https://twitter.com/adamhleo" target="_blank">@adamhleo</a>.
+					</li>
+					<li>
+						<a href="https://github.com/adamleo" target="_blank"><i class="fa-li fab fa-github fa-fw"></i></a>
+						See my open-source code projects at <a href="https://github.com/adamleo" target="_blank">@adamleo</a>.
+					</li>
+					<li>
+						<a href="adamhleo@gmail.com" target="_blank"><i class="fa-li fas fa-envelope fa-fw"></i></a>
+						Email me at <a href="adamhleo@gmail.com" target="_blank">adamhleo@gmail.com</a>.
+					</li>
+					<li>
+						<a href="/index.xml" target="_blank"><i class="fa-li fas fa-rss fa-fw"></i></a>
+						Follow new posts on this site via the <a href="/index.xml" target="_blank">RSS Feed</a>.
+					</li>
+				</ul>
+			</div>
+			<!-- <div class="is-col is-33">
+				<h3 id="connect">Support</h3>
+				<em><p>Some of my work is funded, other work is volunteer.  In lieu of supporting my volunteer or open-source work, please consider donating to these organizations that I work with or are close to my heart.</p></em>
+				<ul class="fa-ul">
+					<li><i class="fa-li fas fa-heart fa-fw"></i><a href="https://ropensci.org/donate/">rOpenSci</a> builds tools and community for open science.</li>
+					<li><i class="fa-li fas fa-heart fa-fw"></i><a href="https://www.ecohealthalliance.org/donate">EcoHealth Alliance</a> works for wildlife health and pandemic prevention.</li>
+					<li><i class="fa-li fas fa-heart fa-fw"></i>The <a href="https://nwlc.org/times-up-legal-defense-fund/">Time's Up Legal Defense Fund</a> fights sexual harassment.</li>
+					<li><i class="fa-li fas fa-heart fa-fw"></i><a href="https://www.hias.org/">HIAS</a> protects and supports refugees.</li>
+				</ul>
+			</div> -->
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="{{ $asset_base }}/assets/js/kube.js"></script>
+<script>
+	$K.dom(window).on('load', $K.init);
+</script>

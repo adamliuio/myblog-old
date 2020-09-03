@@ -1,0 +1,168 @@
+.schnack-signin {
+  text-align: right;
+  font-family: 'IM Fell English';
+  font-style: italic;
+  color: #b24;
+}
+
+.schnack-settings {
+  float: left;
+}
+
+.schnack-login-status {
+  text-align: right;
+  font-family: 'IM Fell English';
+  font-style: italic;
+  color: #AFAFB0;
+}
+
+
+.comments-go-here > ul.schnack-comments {
+  margin-left: 0px;
+}
+
+ul.schnack-comments {
+  list-style-type: none;
+}
+
+li.schnack-comment {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.schnack-form > br {
+  display: none;
+}
+
+.schnack-form {
+  padding-bottom: 10px; 
+}
+
+blockquote.schnack-body {
+  border: none;
+  font-style: normal;
+  color: #111113;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 1em;
+}
+
+div.schnack-comment-inner {
+  border-left: 1px solid #ecc;
+  padding-left: 8px;
+}
+
+.comments-go-here button {
+  -webkit-appearance: none;
+  background: none;
+  color: #b24;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  font-family: 'IM Fell English';
+  font-style: italic;
+  transition: color 0.2s;
+}
+
+.comments-go-here button:hover {
+  text-decoration: underline;
+  color: #ee2455;
+  transition: color 0.2s;
+}
+
+comments-go-here a {
+  transition: color 0.2s;
+}
+.comments-go-here a:hover {
+  text-decoration: underline;
+  color: #ee2455;
+  transition: color 0.2s;
+}
+
+
+button.schnack-reply {
+  margin-left: 93%;
+  text-align: left;
+  color: #AFAFB0;
+  font-size: 0px;
+}
+
+button.schnack-reply:before {
+  width: 90%;
+}
+
+button.schnack-reply:after {
+    display: inline-block;
+    font-family: 'IM FELL FLOWERS 2';
+    content: 'A';
+    font-style: normal;
+    font-size: 15px;
+    transition: color 0.2s;
+
+}
+
+button.schnack-reply:hover:after {
+    color: #ee2455;
+    transition: color 0.2s;
+}
+
+.schnack-signin > br {
+  display: none;
+}
+
+button.schnack-signin-twitter {
+    font-size: 0;
+    font-style: normal;
+}
+
+button.schnack-signin-twitter:after {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f099';
+    font-size: 18pt;
+    vertical-align: -15%;
+  padding-left: 2px;
+}
+
+button.schnack-signin-github {
+    font-size: 0;
+    font-style: normal;
+}
+
+button.schnack-signin-github:after {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f09b';
+    font-size: 18pt;
+    vertical-align: -15%;
+    padding-left: 4px;
+
+}
+
+button.schnack-signin-google {
+    font-size: 0;
+    font-style: normal;
+}
+
+button.schnack-signin-google:after {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f1a0';
+    font-size: 17pt;
+    vertical-align: -15%;
+    padding-left: 4px;
+
+}
+
+.schnack-dateline a {
+  color: #AFAFB0;
+  font-family: 'IM Fell English';
+  font-style: italic;
+}
+
+.schnack-date {
+  float: right;
+}

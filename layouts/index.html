@@ -1,0 +1,48 @@
+{{ $asset_base := .Site.BaseURL }}
+{{ if ne (getenv "HUGO_ASSET_BASEURL") "" }}
+  {{ $asset_base = (getenv "HUGO_ASSET_BASEURL") }}
+{{ end }}
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+<body>
+  {{ partial "navbar.html" . }}
+  <div class="wrapper">
+    <div class="is-row is-stack-40">
+      <div class="is-col is-100 story is-big">
+        <img class="header-img is-stack-20" src="{{ $asset_base }}/assets/imgs/me.JPG">
+        {{ .Content }}
+      </div>
+    </div>
+      <div class="is-row">
+        <div class="is-col is-66 is-stack-20">
+          <div class="is-row is-stack-20">
+            <h2 class="is-center"><a href="/musings">Musings, Explorations, and Announcements</a></h2>
+          </div>
+          {{ range first 5 ((where .Data.Pages.ByDate "Section" "musings").Reverse) }}
+          <div class="is-row is-stack-20">
+            <div class="is-col is-33 dateblock">
+              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+              <h4>{{ .Date.Format "2 January 2006" }}</h4>
+            </div>
+            <div class="is-col is-66 summary">
+              {{ if .Truncated }}
+              {{ .Summary }}
+              <p class="is-text-right"><a href="{{ .RelPermalink }}">Read More…</a></p>
+              {{ else }}
+              {{ .Content }}
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+          <div class="is-col is-33 dateblock">&nbsp;</div>
+          <div class="is-col is-100">
+            <p class="is-text-right is-big"><a href="musings">All musings&nbsp;<span class="pointer">1</span></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+{{ partial "footer.html" . }}
+</body>
+</html>

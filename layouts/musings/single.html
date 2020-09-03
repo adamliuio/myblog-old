@@ -1,0 +1,62 @@
+{{ $asset_base := .Site.BaseURL }}
+{{ if ne (getenv "HUGO_ASSET_BASEURL") "" }}
+  {{ $asset_base = (getenv "HUGO_ASSET_BASEURL") }}
+{{ end }}
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+<body>
+
+{{ partial "navbar.html" . }}
+
+<div class="wrapper">
+  <div class="is-row is-stack-20">
+    <div class="is-col is-10">&nbsp;</div>
+    <div class="is-col is-60">
+    <h1 class="is-text-center"><a href="">{{ .Title }}</a></h1>
+    <h4 class="is-bigger is-text-center">{{ .Date.Format "January 2, 2006" }}</h4>
+    </div>
+    <div class="is-col is-30">&nbsp;</div>
+  </div>
+  <div class="is-row is-stack-20">
+  </div>
+  <div class="is-row is-stack-20">
+    <div class="is-col is-10 is-stack-20">
+    </div>
+    <div class="is-col is-60">
+      <div class="story">
+      {{ .Content }}
+      </div>
+      {{ if .Params.comments | default false }}
+      <h2>Comments</h2>
+      <div class="comments-go-here"></div>
+      <script async src="https://comments.noamross.net/embed.js"
+    data-schnack-slug="{{ strings.TrimRight "-" (replace ( replace .Permalink .Site.BaseURL "" ) "/" "-")  }}"
+    data-schnack-target=".comments-go-here"
+    data-schnack-partial-reply="Reply"
+    data-schnack-partial-sign-in-via="Sign in via"
+    data-schnack-partial-send-comment="Post Comment"
+    data-schnack-partial-or=" "
+    data-schnack-partial-post-comment="Write your comment here. Markdown is supported, as is kindness and respect."
+    data-schnack-partial-mute="Mute"
+    data-schnack-partial-unmute="Unmute"></script>
+      {{ end }}
+      <hr>
+      {{ if .PrevInSection }}
+      <a href="{{.PrevInSection.Permalink}}"><span class="pointer">2</span>&nbsp;{{.PrevInSection.Title}}</a> |
+      {{ end }}
+      <a href="{{ .Site.BaseURL }}musings">All posts</a>
+      {{ if .NextInSection }}
+      | <a href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}}&nbsp;<span class="pointer">1</span></a>
+      {{ end }}
+    </div>
+    <div class="is-col is-30"></div>
+
+  </div>
+</div>
+
+
+{{ partial "footer.html" . }}
+
+</body>
+</html>

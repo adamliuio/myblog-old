@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+
+<body>
+	{{ partial "navbar.html" . }}
+	<div class="wrapper">
+		<div class="is-row">
+			<h1 class="is-center">Curriculum Vitae</h1>
+		</div>
+		<div class="is-row">
+			<p class="is-small is-hidden-print is-center"><em>Click on <i class="fas fa-angle-down fa-fw i"></i> icons for more information.</em></p>
+		</div>
+		<div class="is-row">
+			<div class="is-col is-10 is-hidden-print">
+			</div>
+			<div class="is-col is-40">
+				<h2>Book Shelf</h2>
+				<ul class="fa-ul">
+					{{ range .Site.Data.bookshelf }}
+					<li style="margin-top: 2%;">
+						<i class="fa-li fas fa-graduation-cap fa-fw"></i>
+						<strong>{{ .name}}</strong> by <i>{{ .author}}</i>
+						<br />
+						<span>{{ .notes }}</span>
+					</li>
+					{{ end }}
+				</ul>
+			</div>
+			<div class="is-col is-40">
+				<h2>Projects</h2>
+				<ul class="fa-ul">
+					{{ range sort .Site.Data.projects "date" "desc" }}
+					{{ partial "work.html" .}}
+					{{ end }}
+				</ul>
+			</div>
+			<div class="is-col is-10 is-hidden-print">&nbsp;</div>
+		</div>
+		{{ partial "footer.html" . }}
+	</div>
+</body>
+
+</html>
